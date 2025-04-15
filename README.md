@@ -34,15 +34,64 @@ Wenn man verschiedene Modelle, Algorithmen oder Konfigurationen vergleichen möc
 
 
 <h1> 2.2. Modell Optimisation  </h1>
-Beim Einsatz von MLP-Regression mit PyTorch gibt es verschiedene Möglichkeiten, die Modelle zu verbessern und damit genauere Vorhersagen zu erzielen. Einige Methoden zur Optimierung des Modells, um den MSE (Mean Squared Error) zu reduzieren, sind unter anderem:<br />
+Beim Einsatz von MLP-Regression mit PyTorch gibt es verschiedene Möglichkeiten, die Modelle zu verbessern und damit genauere Vorhersagen zu erzielen. Einige Methoden zur Optimierung des Modells, um den MSE (Mean Squared Error) zu reduzieren, sind unter anderem: 
 
-Erhöhen der Modellkomplexität:
-Die Leistung des Modells kann durch Erhöhung der Modellkomplexität verbessert werden. Dies lässt sich durch Hinzufügen zusätzlicher Schichten oder durch Erhöhen der Anzahl der Neuronen in den vorhandenen Schichten erreichen. Eine modifizierte Version des Modells könnte beispielsweise zusätzliche Schichten und mehr Neuronen enthalten.<br />
+- Erhöhen der Modellkomplexität:
+Die Leistung des Modells kann durch Erhöhung der Modellkomplexität verbessert werden. Dies lässt sich durch Hinzufügen zusätzlicher Schichten oder durch Erhöhen der Anzahl der Neuronen in den vorhandenen Schichten erreichen. Eine modifizierte Version des Modells könnte beispielsweise zusätzliche Schichten und mehr Neuronen enthalten. 
 
 
-Verwenden von Regularisierungstechniken:
-Regularisierungstechniken wie Dropout können helfen, Overfitting zu reduzieren und die Generalisierungsfähigkeit des Modells zu verbessern. Ein Beispiel hierfür ist das Hinzufügen von Dropout-Schichten, um die Modellleistung zu optimieren.<br />
+- Verwenden von Regularisierungstechniken:
+Regularisierungstechniken wie Dropout können helfen, Overfitting zu reduzieren und die Generalisierungsfähigkeit des Modells zu verbessern. Ein Beispiel hierfür ist das Hinzufügen von Dropout-Schichten, um die Modellleistung zu optimieren. 
 
 Während des Trainings wurden verschiedene Modelle getestet: ein kleines, ein mittleres und ein großes Modell. Um eine faire und effiziente Vergleichbarkeit sicherzustellen, wurde ein fester Seed verwendet. Zudem kamen Regularisierungstechniken wie Dropout zum Einsatz, um Overfitting zu reduzieren und die Generalisierungsfähigkeit der Modelle zu verbessern. Als Ergebnis wurde der mittlere quadratische Fehler (MSE) über die Epochen hinweg gemessen; je kleiner der MSE, desto besser ist das Modell trainiert. Zusätzlich wurde ein Diagramm erstellt, das die tatsächlichen Entfernungen den vorhergesagten Entfernungen gegenüberstellt. Das geschriebene Programm implementiert und trainiert ein neuronales Netzwerk zur Vorhersage von Entfernungen basierend auf Bildmerkmalen (Breite, Höhe, Zoom und Focus) mithilfe von PyTorch. Es liest Daten aus Textdateien, bereitet sie auf, teilt sie in Trainings-, Validierungs- und Testdatensätze auf und trainiert dann ein Modell. Das Modell verwendet mehrere Schichten mit Dropout zur Regularisierung, und es wird die mittlere quadratische Abweichung (MSE) als Verlustfunktion genutzt. Das Training wird über mehrere Epochen durchgeführt, wobei die Modellleistung kontinuierlich überwacht und das beste Modell gespeichert wird. Schließlich wird die Modellleistung durch Plotten der tatsächlichen gegen die vorhergesagten Entfernungen visualisiert.
 
 <br />
+
+<br />
+Kleines Modell ohne Dropout:  <br/>
+<img src="https://i.imgur.com/lzUG1l5.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+
+
+<br />
+Mittleres Modell ohne Dropout:  <br/>
+<img src="https://i.imgur.com/cmEXAH6.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+Großes Modell ohne Dropout:  <br/>
+<img src="https://i.imgur.com/qznarOL.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+
+<br />
+<img src="https://i.imgur.com/bzXMC9Z.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+
+
+<br />
+<img src="https://i.imgur.com/Lquj52l.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+
+
+<br />
+<img src="https://i.imgur.com/taAFL42.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+
+<br />
+<img src="https://i.imgur.com/qdfqJL0.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+
+<br />
+<img src="https://i.imgur.com/qdfqJL0.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+
+
+
+
+
+
+
+
+
+
+
+
